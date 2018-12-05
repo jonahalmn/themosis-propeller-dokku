@@ -1,0 +1,27 @@
+version: '3'
+
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+        - "127.0.0.1:8080:80"
+    volumes:
+        - ./:/www/themosis
+        - ./site.conf:/etc/nginx/conf.d/site.conf
+    depends_on:
+        - php
+  php:
+    build: ./docker/php
+    volumes:
+      - ./:/www/themosis
+    depends_on:
+      - db
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root1
+      MYSQL_PASSWORD: root

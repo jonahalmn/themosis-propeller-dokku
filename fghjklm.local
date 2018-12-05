@@ -1,0 +1,6 @@
+DB_NAME = "test"
+DB_USER = "root"
+DB_PASSWORD = "root"
+DB_HOST = "localhost:9906"
+WP_HOME = "localhost:8100"
+WP_SITEURL = "localhost:8100/cms"
