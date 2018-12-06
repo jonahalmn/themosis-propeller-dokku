@@ -26,7 +26,7 @@ define('WP_HOME', getenv('WP_HOME'));
 define('WP_SITEURL', getenv('WP_SITEURL'));
 
 // Jetpack
-define('JETPACK_DEV_DEBUG', false);
+define('JETPACK_DEV_DEBUG', true);
 
 // Encoding
 define('THEMOSIS_CHARSET', 'UTF-8');
@@ -38,5 +38,5 @@ define('WP_DEBUG_DISPLAY', true);
 define('SCRIPT_DEBUG', true);
 
 // Themosis framework
-define('THEMOSIS_ERROR', false);
+define('THEMOSIS_ERROR', true);
 define('BS', false);

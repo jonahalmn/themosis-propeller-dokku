@@ -37,7 +37,7 @@ $file = empty($location) ? '.env' : ".env.{$location}";
  */
 $env = new \Dotenv\Dotenv($rootPath, $file);
 $env->load();
-$env->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'WP_HOME', 'WP_SITEURL']);
+//$env->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'WP_HOME', 'WP_SITEURL']);
 
 /*
  * Load environment configuration
