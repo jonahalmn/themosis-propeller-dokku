@@ -4,7 +4,7 @@
 // Production config
 /*----------------------------------------------------*/
 // Database
-define('DB_NAME', getenv('themosisdb'));
+define('DB_NAME', 'themosisdb');
 define('DB_USER', getenv('DOKKU_MARIADB_THEMOSISDB_ENV_MYSQL_USER'));
 define('DB_PASSWORD', getenv('DOKKU_MARIADB_THEMOSISDB_ENV_MYSQL_PASSWORD'));
 define('DB_HOST', 'dokku-mariadb-themosisdb');
