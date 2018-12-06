@@ -3,9 +3,7 @@
 /*----------------------------------------------------*/
 // Define environment type
 /*----------------------------------------------------*/
-// return [
-//     'local' => 'INSERT-HOSTNAME',
-//     'production' => 'INSERT-HOSTNAME'
-// ];
-
-return false;
+return [
+    'local' => '127.0.0.1:8080',
+    'production' => 'INSERT-HOSTNAME'
+];

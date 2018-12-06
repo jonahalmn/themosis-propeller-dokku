@@ -4,10 +4,22 @@
 // Production config
 /*----------------------------------------------------*/
 // Database
-define('DB_NAME', getenv('DB_NAME'));
-define('DB_USER', getenv('DB_USER'));
-define('DB_PASSWORD', getenv('DB_PASSWORD'));
-define('DB_HOST', getenv('DB_HOST') ? getenv('DB_HOST') : 'localhost');
+
+$url = getenv('DATABASE_URL');
+$components = parse_url($url);
+
+if ($components) {
+ $host = $components['host'];
+ $username = $components['user'];
+ $password = $components['pass'];
+ $dbname = substr($components['path'], 1);
+ $port = $components['port'];
+
+ define('DB_NAME', $dbname);
+define('DB_USER', $username);
+define('DB_PASSWORD', $password);
+define('DB_HOST', $host ? $host : 'localhost');
+}
 
 // WordPress URLs
 define('WP_HOME', getenv('WP_HOME'));
