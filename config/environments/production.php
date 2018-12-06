@@ -15,7 +15,7 @@ if ($components) {
  $dbname = substr($components['path'], 1);
  $port = $components['port'];
 
- define('DB_NAME', $dbname);
+define('DB_NAME', $dbname);
 define('DB_USER', $username);
 define('DB_PASSWORD', $password);
 define('DB_HOST', $host ? $host : 'localhost');
@@ -33,9 +33,9 @@ define('THEMOSIS_CHARSET', 'UTF-8');
 
 // Development
 define('SAVEQUERIES', false);
-define('WP_DEBUG', false);
-define('WP_DEBUG_DISPLAY', false);
-define('SCRIPT_DEBUG', false);
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', true);
+define('SCRIPT_DEBUG', true);
 
 // Themosis framework
 define('THEMOSIS_ERROR', false);
