@@ -4,7 +4,7 @@
 // Define environment type
 /*----------------------------------------------------*/
 return function(){
-    if( getenv('DOKKU_APP_NAME') ) {
+    if( getenv('DOKKU_APP_NAME' !== false) ) {
         return 'production';
     }
 
