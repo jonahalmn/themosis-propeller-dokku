@@ -35,7 +35,7 @@ $file = empty($location) ? '.env' : ".env.{$location}";
 /*
  * Load environment
  */
-if(file_exists($rootPath.DS.$file)){
+if($location == 'local'){
     $env = new \Dotenv\Dotenv($rootPath, $file);
     $env->load();
     $env->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'WP_HOME', 'WP_SITEURL']);

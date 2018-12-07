@@ -3,4 +3,11 @@
 /*----------------------------------------------------*/
 // Define environment type
 /*----------------------------------------------------*/
-return 'production';
+return function(){
+    if( getenv('DOKKU_APP_NAME') ) {
+        return 'production';
+    }
+
+    return 'local';
+};
+
