@@ -7,7 +7,7 @@
 define('DB_NAME', 'themosisdb');
 define('DB_USER', getenv('DOKKU_MARIADB_THEMOSISDB_ENV_MYSQL_USER'));
 define('DB_PASSWORD', getenv('DOKKU_MARIADB_THEMOSISDB_ENV_MYSQL_PASSWORD'));
-define('DB_HOST', 'dokku-mariadb-themosisdb');
+define('DB_HOST', 'DOKKU_MARIADB_THEMOSISDB_PORT_3306_TCP_ADDR');
 
 // WordPress URLs
 define('WP_HOME', getenv('WP_HOME'));
