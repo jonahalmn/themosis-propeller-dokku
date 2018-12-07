@@ -4,7 +4,7 @@
 // Define environment type
 /*----------------------------------------------------*/
 return function(){
-    if( getenv('DOKKU_ROOT') !== false ) {
+    if( getenv('ENV') !== 'local' ) {
         return 'production';
     }
 
